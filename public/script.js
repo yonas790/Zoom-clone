@@ -3,7 +3,7 @@ const socket = io('/')
 const myPeer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: '442'
+    port: '443'
 })
 
 const peers = {}
