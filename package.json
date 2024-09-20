@@ -14,7 +14,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "ejs": "^3.1.10",
+    "env": "^0.0.2",
     "express": "^4.21.0",
     "nodemon": "^3.1.4",
     "path": "^0.12.7",

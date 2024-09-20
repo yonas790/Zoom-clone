@@ -1,16 +1,18 @@
 const express = require('express');
 const path = require('path');
+app.use(cors());
+
 
 
 const { v4: uuidv4 } = require('uuid');
 
 
-const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const { ExpressPeerServer } = require('peer');
 const peerServer = ExpressPeerServer(server, {debug: true})
 
+app.use(cors())
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -43,7 +45,7 @@ io.on('connection', (socket) => {
     });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

@@ -1,4 +1,6 @@
-const socket = io('/')
+const socket = io('https://zoom-clone-opal-omega.vercel.app');
+
+
 
 const myPeer = new Peer(undefined, {
     path: '/peerjs',
